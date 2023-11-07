@@ -1,5 +1,5 @@
 import EnglishCardList from './EnglishCardList';
-import words from './words';
+//import words from './words';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
