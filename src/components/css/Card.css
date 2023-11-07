@@ -1,0 +1,36 @@
+.card_img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.cardContainer {
+    width: 80%;
+    /* max-width: 1100px; */
+    margin: 1.5em auto;
+    flex: 80%;    
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center; /* Center the items horizontally within the grid cells */
+}
+
+.card {
+    box-sizing: border-box;
+    background: #f7f7fc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    place-items: center;
+}
+  
+.card:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+    transition: 0.2s;
+}
+
+.correct {
+    width: 50px;
+}

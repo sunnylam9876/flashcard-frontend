@@ -1,0 +1,24 @@
+label, input {
+    margin: 5px;
+}
+
+.word_error {
+    color: Red;
+}
+
+.word_table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+th, td {
+    border: 1px solid #000; /* Set border for table cells (th and td) */
+    padding: 8px; /* Add padding to cells for spacing */
+    text-align: center; /* Center-align content in cells */
+}
+
+button {
+    margin: 5px;
+}

@@ -1,0 +1,30 @@
+.main-nav a {
+    font-size: .95em;
+    color: #222;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    padding: 1em;
+    transition: .2s;
+  }
+
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;   /* Align items vertically in the middle */
+  }
+
+  .main-nav {
+    margin-left: auto; /* Push the ul to the right by auto margin */
+  }
+
+.main-nav a:hover,
+.main-nav .active {
+  /* color: #fff; */
+  /* background: #3b80d1; */
+}
+
+ul {
+  list-style-type: none;
+}
