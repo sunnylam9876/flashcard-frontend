@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 //import imageOne from './img/1.png';
 import './css/Card.css';
 
-const images = require.context('./img', true);
+//const images = require.context('./img', true);
 
 
 const EnglishCard = (props) => {
@@ -34,7 +34,8 @@ const EnglishCard = (props) => {
 
   const handleWordSubmit = () => {
     //alert(wordSubmit);
-    if (wordSubmit === props.wordid) {
+    const submittedWord = wordSubmit.toLowerCase();
+    if (submittedWord === props.wordid) {
       setCheckCorrect("correct");
       //alert(checkCorrect);
     } else {
