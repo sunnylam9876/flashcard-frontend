@@ -5,7 +5,8 @@ import Admin_WordList from './Admin_WordList';
 import './css/Admin.css';
 
 //const url = 'http://localhost:5000';
-const url = 'https://flashcard-backend-j9f1.onrender.com'
+//const url = 'https://flashcard-backend-j9f1.onrender.com';
+const url = 'https://flashcard-backend-six.vercel.app/';
 
 const Admin_AddWord = () => {
     const [newWord, setNewWord] = useState('');
