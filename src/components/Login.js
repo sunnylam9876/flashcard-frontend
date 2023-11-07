@@ -8,7 +8,9 @@ import './css/Login.css';
 
 const Login = () => {
     //const apiUrl = 'http://localhost:5000'
-    const apiUrl = 'https://flashcard-backend-j9f1.onrender.com'
+    //const apiUrl = 'https://flashcard-backend-j9f1.onrender.com'
+    const apiUrl = 'https://flashcard-backend-six.vercel.app/';
+
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
@@ -68,7 +70,8 @@ const Login = () => {
                         navigate('/admin');
                         setTimeout(() => {window.location.reload();}, 200);
                     } else {
-                        navigate('/play');
+                        //navigate('/play');
+                        navigate('/english');   //redirect to english webpage
                         setTimeout(() => {window.location.reload();}, 200);
                     }
 
