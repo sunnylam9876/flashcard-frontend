@@ -44,6 +44,11 @@ const EnglishCard = (props) => {
     }
   }
 
+  const [wordPeek, setWordPeek] = useState('false');
+  const handlePeek = () => {
+    setWordPeek(true);
+  }
+
   return (
     <div className='card'>
       <img 
@@ -52,6 +57,7 @@ const EnglishCard = (props) => {
         alt={'Card ${props.id}'}
         onClick={playSound} //   
       />
+      {(wordPeek == true) && <div>{props.wordid}</div>}
 
 {/*       <p>word: {props.wordid}</p>
       <p>user: {props.user}</p>        
@@ -60,6 +66,9 @@ const EnglishCard = (props) => {
         <input className = 'input_textbox' type="text" id="wordSubmit"
                           value={wordSubmit} onChange={(e) => setWordSubmit(e.target.value)}></input>
         <button onClick={handleWordSubmit}>Check</button>
+        <button onClick={handlePeek}>Peek</button>
+        
+        
       </div>
       <div>
         {(checkCorrect == 'correct') && <img className='correct' src={require('./img/tick.png')} ></img>}
