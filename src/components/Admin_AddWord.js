@@ -107,7 +107,7 @@ const Admin_AddWord = () => {
                         onChange={(e) => setNewWord(e.target.value)}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
-                              handleWordSubmit();
+                                onSubmit();
                             }
                           }}
                     />
