@@ -104,9 +104,12 @@ const Admin_AddWord = () => {
                         requiredclassName="form-control"
                         name="inputWord"
                         value={newWord}
-                        onChange={
-                            (e) => setNewWord(e.target.value)
-                        }
+                        onChange={(e) => setNewWord(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              handleWordSubmit();
+                            }
+                          }}
                     />
                     <input
                         type="submit"    

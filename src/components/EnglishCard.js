@@ -64,9 +64,9 @@ const EnglishCard = (props) => {
       <p>audio: {props.audio}</p> */}
       <div>
         <input className = 'input_textbox' type="text" id="wordSubmit"
-                          value={wordSubmit} onChange={(e) => setWordSubmit(e.target.value)}
+                          value={wordSubmit} onChange={(e) => setWordSubmit(e.target.value.trim())}   //trim the input
                           onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
+                            if (e.key === 'Enter') {    //detect 'Enter'
                               handleWordSubmit();
                             }
                           }}

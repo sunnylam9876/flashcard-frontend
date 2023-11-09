@@ -98,7 +98,13 @@ const Login = () => {
                         value={userName} onChange={(e) => setUserName(e.target.value)}></input>
                 <label>Password</label>
                 <input className='input_textbox' type="password" id="password" 
-                        value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                        value={password} onChange={(e) => setPassword(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              handleWordSubmit();
+                            }
+                          }}
+                        ></input>
                 {loginError && <p className="login-error">{loginError}</p>}
                 <button onClick={handleLoginClick}>Login</button>
                 <button onClick={handleCreateAccountClick}>Create account</button>
