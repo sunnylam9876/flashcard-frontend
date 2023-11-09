@@ -64,7 +64,13 @@ const EnglishCard = (props) => {
       <p>audio: {props.audio}</p> */}
       <div>
         <input className = 'input_textbox' type="text" id="wordSubmit"
-                          value={wordSubmit} onChange={(e) => setWordSubmit(e.target.value)}></input>
+                          value={wordSubmit} onChange={(e) => setWordSubmit(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              handleWordSubmit();
+                            }
+                          }}
+                          ></input>
         <button onClick={handleWordSubmit}>Check</button>
         <button onClick={handlePeek}>Peek</button>
         
