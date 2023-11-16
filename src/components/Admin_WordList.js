@@ -27,7 +27,11 @@ const EachWord = (props) => {
 
     useEffect(() => {
         if (props.audio) {
-            const firstChar = props.audio.charAt(0);
+            let firstChar = props.audio.charAt(0);
+            const firstCharAsInteger = parseInt(firstChar, 10); //convert to integer using base 10
+            if (!isNaN(firstCharAsInteger)) {
+                firstChar = 'number';   //if the audio tag started with a number, set firstChar to 'number'
+            }
             const audioUrl = 'https://media.merriam-webster.com/audio/prons/en/us/mp3/' + firstChar + '/' + props.audio + '.mp3'
             const audio = new Audio(audioUrl);
             setAudioElement(audio);
